@@ -12,14 +12,25 @@
 | --- | --- | --- | --- |
 | `province` | 省份名称 | string | 与空间权重矩阵省份顺序保持一致 |
 | `year` | 年份 | int | 面板年份 |
-| `carbon_intensity` | 碳强度 | float | 被解释变量，建议口径为碳排放量 / GDP 或单位 GDP 碳排放 |
+| `carbon_intensity` | 碳强度 | float | 被解释变量，`carbon_emissions_mt * 100 / gdp_real`，单位为万吨 CO2 / 亿元实际 GDP |
 | `digital_finance` | 数字普惠金融指数 | float | 核心解释变量 |
-| `gdp_per_capita` | 人均 GDP | float | 控制变量 |
+| `gdp_per_capita` | 人均实际 GDP | float | 控制变量，使用 2011 年基期实际 GDP / 常住人口 |
 | `industrial_structure` | 产业结构 | float | 控制变量 |
 | `urbanization` | 城镇化率 | float | 控制变量 |
 | `government_intervention` | 政府干预程度 | float | 控制变量 |
-| `innovation` | 科技创新水平 | float | 控制变量 |
-| `energy_structure` | 能源结构 | float | 控制变量 |
+| `innovation` | 科技创新水平 | float | 控制变量，使用 ln(1 + 国内发明专利授权量) |
+| `energy_structure` | 能源结构 | float | 控制变量，煤炭相关终端能源消费占总终端能源消费比重 |
+
+## 主要审计字段
+
+| 字段 | 含义 |
+| --- | --- |
+| `gdp_nominal` | 现价地区生产总值 |
+| `gdp_index_previous_year_100` | 地区生产总值指数，上年 = 100 |
+| `gdp_real` | 以 2011 年为基期链式折算的实际 GDP |
+| `patent_grants` | 国内发明专利授权量原值 |
+| `coal_related_tce` | 折算为万吨标准煤的煤炭相关终端能源消费 |
+| `total_energy_tce` | 折算为万吨标准煤的总终端能源消费 |
 
 ## 清洗规则
 
