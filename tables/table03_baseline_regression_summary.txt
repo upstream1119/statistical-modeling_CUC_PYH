@@ -1,0 +1,44 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:       carbon_intensity   R-squared:                       0.440
+Model:                            OLS   Adj. R-squared:                  0.411
+Method:                 Least Squares   F-statistic:                     15.70
+Date:                Thu, 07 May 2026   Prob (F-statistic):           8.10e-35
+Time:                        18:42:34   Log-Likelihood:                -691.28
+No. Observations:                 360   AIC:                             1421.
+Df Residuals:                     341   BIC:                             1494.
+Df Model:                          18                                         
+Covariance Type:                  HC1                                         
+===========================================================================================
+                              coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------
+Intercept                  -6.9968      1.515     -4.618      0.000      -9.966      -4.028
+C(year)[T.2012]             0.2597      0.670      0.388      0.698      -1.054       1.573
+C(year)[T.2013]             0.7124      1.123      0.634      0.526      -1.489       2.913
+C(year)[T.2014]             0.8214      1.282      0.641      0.522      -1.691       3.334
+C(year)[T.2015]             0.9130      1.570      0.582      0.561      -2.164       3.990
+C(year)[T.2016]             0.8490      1.577      0.538      0.590      -2.241       3.939
+C(year)[T.2017]             1.0556      1.976      0.534      0.593      -2.816       4.928
+C(year)[T.2018]             1.1639      2.210      0.527      0.598      -3.168       5.496
+C(year)[T.2019]             1.2869      2.397      0.537      0.591      -3.411       5.985
+C(year)[T.2020]             1.4612      2.534      0.577      0.564      -3.505       6.427
+C(year)[T.2021]             1.6557      2.733      0.606      0.545      -3.701       7.012
+C(year)[T.2022]             1.4346      2.780      0.516      0.606      -4.014       6.883
+digital_finance            -0.0089      0.009     -0.991      0.322      -0.026       0.009
+gdp_per_capita              0.0624      0.080      0.780      0.435      -0.094       0.219
+industrial_structure       -0.0866      1.583     -0.055      0.956      -3.190       3.017
+urbanization                5.2789      1.254      4.209      0.000       2.821       7.737
+government_intervention     6.3372      1.312      4.831      0.000       3.766       8.908
+innovation               7.492e-07   4.46e-06      0.168      0.867   -7.99e-06    9.49e-06
+energy_structure            7.5882      1.097      6.919      0.000       5.439       9.738
+==============================================================================
+Omnibus:                      170.679   Durbin-Watson:                   0.191
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              806.127
+Skew:                           2.040   Prob(JB):                    8.95e-176
+Kurtosis:                       9.090   Cond. No.                     1.63e+06
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+[2] The condition number is large, 1.63e+06. This might indicate that there are
+strong multicollinearity or other numerical problems.

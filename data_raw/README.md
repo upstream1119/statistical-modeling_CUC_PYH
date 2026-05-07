@@ -24,3 +24,16 @@
 2. 省份名称、年份范围、单位口径必须写清楚。
 3. 如果数据经过换算、取对数、缩尾或插值，需要在处理说明中记录。
 4. 不要直接上传无法确认授权的大型商业数据库文件。
+
+## 读取路径规则
+
+1. 正式建模优先读取根目录中的 `data_raw/spatial_weights.csv`。
+2. `data_raw/spatial/` 用作空间权重矩阵归档副本，保留严欣浩上传的原始整理结果。
+3. 原始数据按来源分目录归档：
+   - `data_raw/carbon_emissions/`
+   - `data_raw/digital_finance/`
+   - `data_raw/energy/`
+   - `data_raw/nbs/`
+   - `data_raw/patents/`
+   - `data_raw/spatial/`
+4. 后续如果新增数据源，应先放入对应来源目录，再同步更新本 README 的数据登记表。
