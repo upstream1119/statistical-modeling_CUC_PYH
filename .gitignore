@@ -32,3 +32,6 @@ Thumbs.db
 
 # Generated local reports
 *.html
+
+# Team-shared files outside this repository's reproducible workflow
+其他文件/
