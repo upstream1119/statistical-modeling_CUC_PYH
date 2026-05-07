@@ -4,7 +4,7 @@ Dep. Variable:       carbon_intensity   R-squared:                       0.440
 Model:                            OLS   Adj. R-squared:                  0.411
 Method:                 Least Squares   F-statistic:                     15.70
 Date:                Thu, 07 May 2026   Prob (F-statistic):           8.10e-35
-Time:                        18:42:34   Log-Likelihood:                -691.28
+Time:                        20:38:08   Log-Likelihood:                -691.28
 No. Observations:                 360   AIC:                             1421.
 Df Residuals:                     341   BIC:                             1494.
 Df Model:                          18                                         

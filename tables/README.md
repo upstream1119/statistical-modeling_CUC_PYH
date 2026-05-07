@@ -29,3 +29,10 @@
 | `table03_baseline_regression.csv` | 基准回归系数表 | `code/03_baseline_model.py` |
 | `table03_baseline_regression_summary.txt` | 基准回归完整文本摘要 | `code/03_baseline_model.py` |
 | `table04_moran_i_by_year.csv` | 碳强度逐年 Moran's I 空间自相关检验 | `code/04_spatial_analysis.py` |
+
+## Spatial Models and Robustness Tables
+
+- `table05_spatial_model_comparison.csv`: SAR, SEM, and SDM coefficient comparison. The SDM result is the main reference for spatial spillover discussion.
+- `table06_spatial_effect_decomposition.csv`: first-pass SDM local coefficient and spatial-lag coefficient table. Use `W_digital_finance` as the key spillover term.
+- `table07_robustness_checks.csv`: baseline robustness checks, including lagged digital finance, transformed innovation, removing urbanization, and log GDP per capita.
+

@@ -96,3 +96,20 @@ python code/04_spatial_analysis.py
 - 模型设定初稿
 
 等 `tables/` 和 `figures/` 产出后，再补写实证结果分析。
+
+## 下一阶段空间计量模型
+
+在基准回归和 Moran's I 检验之后，正式进入空间计量模型。第一版采用 pooled panel 方案：在同一年份内部构造省际邻接权重矩阵，不跨年份连接观测值。
+
+- SAR：检验本地碳强度是否受到邻近地区碳强度影响。
+- SEM：检验遗漏空间相关因素是否进入误差项。
+- SDM：同时加入解释变量及其空间滞后项，作为本文主模型，用于识别数字普惠金融的本地影响和空间溢出效应。
+
+结果交付文件：
+
+- `tables/table05_spatial_model_comparison.csv`
+- `tables/table06_spatial_effect_decomposition.csv`
+- `tables/table07_robustness_checks.csv`
+
+论文解释优先级：先解释 Moran's I 证明空间相关性，再以 SDM 中的 `digital_finance` 和 `W_digital_finance` 讨论本地效应与空间溢出效应。
+
