@@ -37,7 +37,7 @@ def placeholder_moran_summary(df: pd.DataFrame) -> pd.DataFrame:
         df.groupby("year")
         .agg(
             n_provinces=("province", "nunique"),
-            low_carbon_mean=("low_carbon", "mean"),
+            carbon_intensity_mean=("carbon_intensity", "mean"),
             digital_finance_mean=("digital_finance", "mean"),
         )
         .reset_index()

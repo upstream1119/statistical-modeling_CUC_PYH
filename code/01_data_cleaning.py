@@ -17,7 +17,7 @@ PANEL_PATH = PROCESSED_DIR / "panel_data.csv"
 REQUIRED_COLUMNS = [
     "province",
     "year",
-    "low_carbon",
+    "carbon_intensity",
     "digital_finance",
     "gdp_per_capita",
     "industrial_structure",

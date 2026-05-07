@@ -12,7 +12,7 @@
 | --- | --- | --- | --- |
 | `province` | 省份名称 | string | 与空间权重矩阵省份顺序保持一致 |
 | `year` | 年份 | int | 面板年份 |
-| `low_carbon` | 低碳转型水平 | float | 被解释变量 |
+| `carbon_intensity` | 碳强度 | float | 被解释变量，建议口径为碳排放量 / GDP 或单位 GDP 碳排放 |
 | `digital_finance` | 数字普惠金融指数 | float | 核心解释变量 |
 | `gdp_per_capita` | 人均 GDP | float | 控制变量 |
 | `industrial_structure` | 产业结构 | float | 控制变量 |

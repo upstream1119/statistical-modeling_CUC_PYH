@@ -43,7 +43,7 @@ python code/04_spatial_analysis.py
 | --- | --- |
 | `province` | 省份名称 |
 | `year` | 年份 |
-| `low_carbon` | 低碳转型水平或代理变量 |
+| `carbon_intensity` | 碳强度，作为被解释变量 |
 | `digital_finance` | 数字普惠金融指数 |
 | `gdp_per_capita` | 人均 GDP |
 | `industrial_structure` | 产业结构 |

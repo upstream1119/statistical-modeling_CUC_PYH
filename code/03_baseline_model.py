@@ -1,7 +1,7 @@
 """Baseline regression scaffold.
 
 The default model is:
-low_carbon = digital_finance + controls + year fixed effects.
+carbon_intensity = digital_finance + controls + year fixed effects.
 Province fixed effects can be added after the final sample size is confirmed.
 """
 
@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data_processed" / "panel_data.csv"
 TABLES_DIR = ROOT / "tables"
 
-DEPENDENT_VAR = "low_carbon"
+DEPENDENT_VAR = "carbon_intensity"
 CORE_VAR = "digital_finance"
 CONTROL_VARS = [
     "gdp_per_capita",

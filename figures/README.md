@@ -6,7 +6,7 @@
 
 | 文件名示例 | 内容 |
 | --- | --- |
-| `fig01_trend_low_carbon.png` | 低碳转型趋势图 |
+| `fig01_trend_carbon_intensity.png` | 碳强度趋势图 |
 | `fig02_moran_scatter.png` | Moran 散点图 |
 | `fig03_spatial_distribution.png` | 空间分布图 |
 

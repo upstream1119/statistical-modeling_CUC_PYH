@@ -10,7 +10,7 @@ TABLES_DIR = ROOT / "tables"
 FIGURES_DIR = ROOT / "figures"
 
 NUMERIC_COLUMNS = [
-    "low_carbon",
+    "carbon_intensity",
     "digital_finance",
     "gdp_per_capita",
     "industrial_structure",
