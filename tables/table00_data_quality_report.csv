@@ -1,0 +1,17 @@
+﻿metric,value,note
+n_rows,360,Total province-year rows
+n_provinces,30,Unique provinces
+min_year,2011,First sample year
+max_year,2022,Last sample year
+expected_balanced_rows,360,Provinces multiplied by years
+duplicated_province_year,0,Duplicated province-year keys
+missing_province,0,Missing values
+missing_year,0,Missing values
+missing_carbon_intensity,0,Missing values
+missing_digital_finance,0,Missing values
+missing_gdp_per_capita,0,Missing values
+missing_industrial_structure,0,Missing values
+missing_urbanization,0,Missing values
+missing_government_intervention,0,Missing values
+missing_innovation,0,Missing values
+missing_energy_structure,0,Missing values
