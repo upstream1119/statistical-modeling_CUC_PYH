@@ -19,7 +19,7 @@
 | `urbanization` | 城镇化率 | float | 控制变量 |
 | `government_intervention` | 政府干预程度 | float | 控制变量 |
 | `innovation` | 科技创新水平 | float | 控制变量，使用 ln(1 + 国内发明专利授权量) |
-| `energy_structure` | 能源结构 | float | 控制变量，煤炭相关终端能源消费占总终端能源消费比重 |
+| `energy_structure` | 能源结构 | float | 控制变量，煤炭及煤炭加工相关终端能源消费占总终端能源消费比重 |
 
 ## 主要审计字段
 
@@ -29,7 +29,7 @@
 | `gdp_index_previous_year_100` | 地区生产总值指数，上年 = 100 |
 | `gdp_real` | 以 2011 年为基期链式折算的实际 GDP |
 | `patent_grants` | 国内发明专利授权量原值 |
-| `coal_related_tce` | 折算为万吨标准煤的煤炭相关终端能源消费 |
+| `coal_related_tce` | 折算为万吨标准煤的煤炭及煤炭加工相关终端能源消费 |
 | `total_energy_tce` | 折算为万吨标准煤的总终端能源消费 |
 
 ## 清洗规则

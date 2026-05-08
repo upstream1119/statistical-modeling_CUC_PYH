@@ -1,44 +1,44 @@
                             OLS Regression Results                            
 ==============================================================================
-Dep. Variable:       carbon_intensity   R-squared:                       0.463
-Model:                            OLS   Adj. R-squared:                  0.435
-Method:                 Least Squares   F-statistic:                     17.37
-Date:                Thu, 07 May 2026   Prob (F-statistic):           4.09e-38
-Time:                        22:10:13   Log-Likelihood:                -677.90
-No. Observations:                 360   AIC:                             1394.
-Df Residuals:                     341   BIC:                             1468.
+Dep. Variable:       carbon_intensity   R-squared:                       0.511
+Model:                            OLS   Adj. R-squared:                  0.485
+Method:                 Least Squares   F-statistic:                     17.56
+Date:                Fri, 08 May 2026   Prob (F-statistic):           1.75e-38
+Time:                        10:43:54   Log-Likelihood:                -661.04
+No. Observations:                 360   AIC:                             1360.
+Df Residuals:                     341   BIC:                             1434.
 Df Model:                          18                                         
 Covariance Type:                  HC1                                         
 ===========================================================================================
                               coef    std err          z      P>|z|      [0.025      0.975]
 -------------------------------------------------------------------------------------------
-Intercept                   0.2479      1.456      0.170      0.865      -2.605       3.101
-C(year)[T.2012]             0.1011      0.564      0.179      0.858      -1.005       1.207
-C(year)[T.2013]             0.3486      0.908      0.384      0.701      -1.431       2.129
-C(year)[T.2014]             0.2935      1.037      0.283      0.777      -1.739       2.326
-C(year)[T.2015]             0.5549      1.273      0.436      0.663      -1.940       3.050
-C(year)[T.2016]             0.6354      1.262      0.504      0.615      -1.838       3.109
-C(year)[T.2017]             0.7142      1.567      0.456      0.649      -2.357       3.786
-C(year)[T.2018]             0.8271      1.758      0.471      0.638      -2.618       4.272
-C(year)[T.2019]             0.8021      1.898      0.423      0.673      -2.917       4.521
-C(year)[T.2020]             1.0088      2.016      0.500      0.617      -2.942       4.959
-C(year)[T.2021]             1.2997      2.168      0.600      0.549      -2.949       5.548
-C(year)[T.2022]             1.5335      2.230      0.688      0.492      -2.838       5.905
-digital_finance         -8.417e-05      0.007     -0.012      0.991      -0.014       0.014
-gdp_per_capita              0.0466      0.080      0.583      0.560      -0.110       0.203
-industrial_structure        4.9661      1.481      3.352      0.001       2.063       7.870
-urbanization                7.2794      1.435      5.072      0.000       4.466      10.093
-government_intervention     0.7141      1.331      0.537      0.592      -1.894       3.323
-innovation                 -0.9518      0.121     -7.881      0.000      -1.188      -0.715
-energy_structure            7.4199      1.049      7.070      0.000       5.363       9.477
+Intercept                  -1.2610      1.633     -0.772      0.440      -4.462       1.940
+C(year)[T.2012]            -0.4922      0.594     -0.829      0.407      -1.656       0.671
+C(year)[T.2013]            -0.7215      0.944     -0.764      0.445      -2.572       1.129
+C(year)[T.2014]            -1.0010      1.091     -0.917      0.359      -3.140       1.138
+C(year)[T.2015]            -1.1840      1.358     -0.872      0.383      -3.845       1.478
+C(year)[T.2016]            -1.1877      1.376     -0.863      0.388      -3.885       1.509
+C(year)[T.2017]            -1.4593      1.687     -0.865      0.387      -4.766       1.847
+C(year)[T.2018]            -1.5563      1.878     -0.829      0.407      -5.237       2.125
+C(year)[T.2019]            -1.8047      2.034     -0.887      0.375      -5.791       2.182
+C(year)[T.2020]            -1.7760      2.154     -0.824      0.410      -5.998       2.446
+C(year)[T.2021]            -1.6949      2.325     -0.729      0.466      -6.252       2.863
+C(year)[T.2022]            -1.5218      2.382     -0.639      0.523      -6.190       3.147
+digital_finance             0.0096      0.008      1.219      0.223      -0.006       0.025
+gdp_per_capita             -0.0043      0.085     -0.050      0.960      -0.170       0.161
+industrial_structure        3.6832      1.309      2.813      0.005       1.117       6.249
+urbanization                7.6496      1.478      5.176      0.000       4.753      10.546
+government_intervention     1.9387      1.267      1.530      0.126      -0.546       4.423
+innovation                 -0.8917      0.115     -7.730      0.000      -1.118      -0.666
+energy_structure            9.2746      1.246      7.446      0.000       6.833      11.716
 ==============================================================================
-Omnibus:                      150.204   Durbin-Watson:                   0.211
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):              708.268
-Skew:                           1.748   Prob(JB):                    1.59e-154
-Kurtosis:                       8.916   Cond. No.                     2.26e+04
+Omnibus:                      122.435   Durbin-Watson:                   0.233
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              440.259
+Skew:                           1.486   Prob(JB):                     2.51e-96
+Kurtosis:                       7.530   Cond. No.                     2.27e+04
 ==============================================================================
 
 Notes:
 [1] Standard Errors are heteroscedasticity robust (HC1)
-[2] The condition number is large, 2.26e+04. This might indicate that there are
+[2] The condition number is large, 2.27e+04. This might indicate that there are
 strong multicollinearity or other numerical problems.

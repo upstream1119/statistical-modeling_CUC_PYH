@@ -7,6 +7,7 @@ import statsmodels.formula.api as smf
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data_processed" / "panel_data.csv"
+REGION_GROUPS_PATH = ROOT / "data_raw" / "region_groups.csv"
 TABLES_DIR = ROOT / "tables"
 OUT_PATH = TABLES_DIR / "table08_heterogeneity_by_region.csv"
 
@@ -20,39 +21,6 @@ CONTROL_VARS = [
     "innovation",
     "energy_structure",
 ]
-
-REGION_MAP = {
-    "北京": "东部",
-    "天津": "东部",
-    "河北": "东部",
-    "上海": "东部",
-    "江苏": "东部",
-    "浙江": "东部",
-    "福建": "东部",
-    "山东": "东部",
-    "广东": "东部",
-    "海南": "东部",
-    "山西": "中部",
-    "安徽": "中部",
-    "江西": "中部",
-    "河南": "中部",
-    "湖北": "中部",
-    "湖南": "中部",
-    "内蒙古": "西部",
-    "广西": "西部",
-    "重庆": "西部",
-    "四川": "西部",
-    "贵州": "西部",
-    "云南": "西部",
-    "陕西": "西部",
-    "甘肃": "西部",
-    "青海": "西部",
-    "宁夏": "西部",
-    "新疆": "西部",
-    "辽宁": "东北",
-    "吉林": "东北",
-    "黑龙江": "东北",
-}
 
 REGION_ORDER = ["东部", "中部", "西部", "东北"]
 
@@ -69,8 +37,14 @@ def load_panel_data() -> pd.DataFrame:
 
 
 def add_region(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.copy()
-    df["region"] = df["province"].map(REGION_MAP)
+    if not REGION_GROUPS_PATH.exists():
+        raise FileNotFoundError(f"Missing region groups: {REGION_GROUPS_PATH}")
+    region_groups = pd.read_csv(REGION_GROUPS_PATH)
+    expected_columns = {"province", "region"}
+    if not expected_columns.issubset(region_groups.columns):
+        raise ValueError(f"Region groups must include columns: {sorted(expected_columns)}")
+
+    df = df.merge(region_groups[["province", "region"]], on="province", how="left")
     missing = sorted(df.loc[df["region"].isna(), "province"].unique().tolist())
     if missing:
         raise ValueError(f"Missing region mapping for provinces: {missing}")

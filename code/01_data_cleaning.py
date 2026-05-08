@@ -181,6 +181,8 @@ COAL_RELATED_ENERGY_COLUMNS = [
     "Other_Washed_Coal",
     "Briquettes",
     "Coke",
+    "Coke_Oven_Gas",
+    "Other_Coking_Products",
 ]
 
 

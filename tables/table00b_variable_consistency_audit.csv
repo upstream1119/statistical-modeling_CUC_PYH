@@ -1,0 +1,10 @@
+﻿item,passed,detail
+carbon_intensity = carbon_emissions_mt * 100 / gdp_real,True,max_abs_diff=1.7763568394e-15
+energy_structure = coal_related_tce / total_energy_tce,True,max_abs_diff=2.22044604925e-16
+innovation = ln(1 + patent_grants),True,max_abs_diff=1.7763568394e-15
+gdp_real base year equals 2011 nominal GDP,True,max_abs_diff=0
+gdp_real chain calculation uses previous year index,True,max_abs_diff=2.91038304567e-11
+spatial_weights.csv matches panel provinces,True,"rows=130, province_count=30"
+spatial_weights_geo_distance.csv matches panel provinces,True,"rows=870, expected_rows=870, province_count=30"
+spatial_weights_economic_distance.csv matches panel provinces,True,"rows=870, expected_rows=870, province_count=30"
+region_groups.csv matches panel provinces,True,"rows=30, regions=东北,东部,中部,西部"
