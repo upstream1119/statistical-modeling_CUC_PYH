@@ -22,6 +22,7 @@
 | 文件名 | 内容 | 生成脚本 |
 | --- | --- | --- |
 | `table00_data_quality_report.csv` | 面板样本量、年份范围、缺失值和重复键检查 | `code/02_descriptive_analysis.py` |
+| `table00b_variable_consistency_audit.csv` | 变量公式、实际 GDP 折算、空间矩阵和地区分组一致性审计 | `code/08_validate_variable_consistency.py` |
 | `table01_descriptive_statistics.csv` | 核心变量描述性统计 | `code/02_descriptive_analysis.py` |
 | `table02_correlation_matrix.csv` | 核心变量相关性矩阵 | `code/02_descriptive_analysis.py` |
 | `table02a_high_correlation_pairs.csv` | 绝对相关系数不低于 0.8 的变量对 | `code/02_descriptive_analysis.py` |
