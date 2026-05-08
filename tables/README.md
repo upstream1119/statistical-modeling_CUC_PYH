@@ -36,3 +36,7 @@
 - `table06_spatial_effect_decomposition.csv`: first-pass SDM local coefficient and spatial-lag coefficient table. Use `W_digital_finance` as the key spillover term.
 - `table07_robustness_checks.csv`: baseline robustness checks, including lagged digital finance, transformed innovation, removing urbanization, and log GDP per capita.
 
+## Regional Heterogeneity
+
+- `table08_heterogeneity_by_region.csv`: regional OLS heterogeneity results for East, Central, West, and Northeast China. Use this table to discuss whether the digital finance effect differs across regions.
+
