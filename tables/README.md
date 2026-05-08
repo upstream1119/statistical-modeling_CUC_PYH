@@ -41,3 +41,4 @@
 
 - `table08_heterogeneity_by_region.csv`: regional OLS heterogeneity results for East, Central, West, and Northeast China. Use this table to discuss whether the digital finance effect differs across regions.
 - `table09_spatial_weight_robustness.csv`: compares key SAR, SEM, and SDM coefficients under adjacency, geographic-distance, and economic-distance spatial weights.
+- `table10_empirical_findings_summary.csv`: writing-oriented empirical findings package. It maps each result table to the paper section, approved interpretation, and prohibited wording.
