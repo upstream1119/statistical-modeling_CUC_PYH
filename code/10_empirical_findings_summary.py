@@ -52,6 +52,25 @@ def read_weight_term(weight_name: str, term: str = "W_digital_finance") -> tuple
     return float(row["coefficient"]), float(row["p_value"])
 
 
+def read_mechanism_summary() -> tuple[str, str]:
+    df = pd.read_csv(TABLES_DIR / "table11_mechanism_tests.csv")
+    parts = []
+    cautions = set()
+    for _, row in df.iterrows():
+        parts.append(
+            f"{row['mechanism_label']}: "
+            f"path_a coef={row['path_a_digital_finance_coef']:.4f}, p={row['path_a_digital_finance_p_value']:.4f}; "
+            f"path_b coef={row['path_b_mechanism_coef']:.4f}, p={row['path_b_mechanism_p_value']:.4f}"
+        )
+        cautions.add(str(row["writing_caution"]))
+    return " | ".join(parts), "；".join(sorted(cautions))
+
+
+def read_policy_counts() -> dict[str, int]:
+    df = pd.read_csv(TABLES_DIR / "table12_policy_typology.csv")
+    return {str(key): int(value) for key, value in df["policy_type"].value_counts().items()}
+
+
 def build_rows() -> list[dict[str, str]]:
     baseline_coef, baseline_p = read_baseline()
     moran_min, moran_max, moran_max_p = read_moran_range()
@@ -66,6 +85,8 @@ def build_rows() -> list[dict[str, str]]:
     adjacency_w, adjacency_p = read_weight_term("adjacency")
     geo_w, geo_p = read_weight_term("geo_distance")
     economic_w, economic_p = read_weight_term("economic_distance")
+    mechanism_statistic, mechanism_caution = read_mechanism_summary()
+    policy_counts = read_policy_counts()
 
     return [
         {
@@ -149,9 +170,27 @@ def build_rows() -> list[dict[str, str]]:
             "do_not_write": "不要写空间溢出效应稳健显著；不要把经济距离矩阵结果解释为支持低碳外溢。",
         },
         {
+            "paper_section": "机制路径检验",
+            "source_table": "table11_mechanism_tests.csv",
+            "key_result": "技术创新和能源结构路径提供一定线索；产业结构路径支持不足。",
+            "statistic": mechanism_statistic,
+            "paper_interpretation": "机制检验用于说明数字普惠金融可能通过技术创新和能源结构调整影响碳强度，但当前结果不能作为严格因果中介识别。",
+            "writing_status": "可写入实证结果的机制路径小节，表述为补充证据或路径线索。",
+            "do_not_write": mechanism_caution,
+        },
+        {
+            "paper_section": "政策分型",
+            "source_table": "table12_policy_typology.csv",
+            "key_result": "基于数字普惠金融水平与碳强度压力构建四象限政策分型。",
+            "statistic": "; ".join(f"{key}={value}" for key, value in policy_counts.items()),
+            "paper_interpretation": "四象限分型用于将实证结果转化为差异化政策建议，支撑第六章政策优化分析。",
+            "writing_status": "可写入政策分型与优化建议章节，完整省份名单可放正文表格或附录。",
+            "do_not_write": "不要写成 TOPSIS/K-means；不要写成因果模型；不要写某类地区必然适用某项政策。",
+        },
+        {
             "paper_section": "综合结论口径",
-            "source_table": "table03-table09",
-            "key_result": "空间依赖稳健存在，数字普惠金融的全国平均直接效应不稳定，地理邻近下存在边际负向外溢线索，区域差异明显。",
+            "source_table": "table03-table12",
+            "key_result": "空间依赖稳健存在，数字普惠金融的全国平均直接效应不稳定，地理邻近下存在边际负向外溢线索，区域差异明显，机制路径和政策分型提供补充支撑。",
             "statistic": "synthesis of current empirical tables",
             "paper_interpretation": "论文应聚焦空间依赖、区域差异和政策优化，而不是强行宣称数字普惠金融显著降碳。",
             "writing_status": "作为实证小结和政策建议的统一主线。",
