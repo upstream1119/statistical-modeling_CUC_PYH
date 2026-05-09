@@ -1,6 +1,6 @@
 # 徐若诚论文稿修改清单
 
-本文档用于把当前新增实验结果转化为论文修改任务。请优先修改正文口径，再补表格和图片。
+本文档用于把当前新增实验结果转化为论文修改任务。请优先修改正文口径，再补表格和图片。正式论文图片内部不放标题，图名由正文图注单独给出。
 
 ## 1. 必须先修正的模型口径
 
@@ -76,12 +76,13 @@ tables/table12_policy_typology.csv
 
 | 图表 | 文件 | 建议位置 |
 | --- | --- | --- |
-| 图1 | `figures/figure01_carbon_intensity_trend.png` | 数据描述或实证结果开头 |
-| 图2 | `figures/figure02_digital_finance_trend.png` | 数据描述或变量趋势分析 |
-| 图3 | `figures/figure03_moran_i_trend.png` | 空间自相关检验部分 |
-| 图4 | `figures/figure04_regional_heterogeneity_coefficients.png` | 区域异质性分析部分 |
-| 图5 | `figures/figure05_spatial_weight_robustness.png` | 权重矩阵敏感性分析部分 |
-| 图6 | `figures/figure06_policy_typology_quadrant.png` | 政策分型与政策建议部分 |
+| 图1 | `figures/figure00_research_framework.png` | 引言末尾或模型设定开头 |
+| 图2 | `figures/figure01_carbon_intensity_trend.png` | 数据描述或实证结果开头 |
+| 图3 | `figures/figure02_digital_finance_trend.png` | 数据描述或变量趋势分析 |
+| 图4 | `figures/figure03_moran_i_trend.png` | 空间自相关检验部分 |
+| 图5 | `figures/figure04_regional_heterogeneity_coefficients.png` | 区域异质性分析部分 |
+| 图6 | `figures/figure05_spatial_weight_robustness.png` | 权重矩阵敏感性分析部分 |
+| 图7 | `figures/figure06_policy_typology_quadrant.png` | 政策分型与政策建议部分 |
 
 ## 5. 仍然不能写的结论
 
