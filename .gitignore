@@ -33,5 +33,12 @@ Thumbs.db
 # Generated local reports
 *.html
 
+# Local PDF/Word review artifacts
+pdf_page_check-*.png
+pdf_check*.png
+statmodel_*_pdf.txt
+tmp/docs/
+tmp/pdfs/
+
 # Team-shared files outside this repository's reproducible workflow
 其他文件/
